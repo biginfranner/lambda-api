@@ -24,6 +24,8 @@ jobs:
         uses: aws-actions/setup-sam@v2
 
       - name: Build and Deploy
+        # --- 修正ポイント: 作業ディレクトリを指定 ---
+        working-directory: ./docker-version
         run: |
           sam build
           

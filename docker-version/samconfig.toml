@@ -1,0 +1,14 @@
+version = 0.1
+
+[default.deploy.parameters]
+stack_name = "lambda-memo-api-docker"
+resolve_s3 = true
+s3_prefix = "lambda-memo-api"
+region = "ap-northeast-1"
+
+capabilities = "CAPABILITY_IAM"
+image_repository = "872938957475.dkr.ecr.ap-northeast-1.amazonaws.com/lambda-api-repo"
+image_repositories = ["MemoFunction=872938957475.dkr.ecr.ap-northeast-1.amazonaws.com/lambda-api-repo"]
+
+[default.global.parameters]
+region = "ap-northeast-1"

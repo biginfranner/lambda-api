@@ -5,7 +5,7 @@ stack_name = "lambda-memo-api"
 resolve_s3 = true
 s3_prefix = "lambda-memo-api"
 region = "ap-northeast-1"
-profile = "sam-deploy"
+
 capabilities = "CAPABILITY_IAM"
 image_repositories = []
 

@@ -7,10 +7,14 @@ Resources:
       PackageType: Image  # ←ここをImageに変更
       Architectures:
         - x86_64
-        # --- ：環境変数の設定 ---
+      # --- ：環境変数の設定 ---
       Environment:
         Variables:
           MEMO_TABLE_NAME: !Ref MemoTable # MemoTableというリソースの名前を環境変数にセット
+      # --- DynamoDBへのアクセス権限 ---
+      Policies:
+        - DynamoDBCrudPolicy:
+            TableName: !Ref MemoTable
       Events:
         ApiEvent:
           Type: Api

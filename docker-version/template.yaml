@@ -10,7 +10,7 @@ Resources:
         # --- ：環境変数の設定 ---
       Environment:
         Variables:
-          TABLE_NAME: !Ref MemoTable # MemoTableというリソースの名前を環境変数にセット
+          MEMO_TABLE_NAME: !Ref MemoTable # MemoTableというリソースの名前を環境変数にセット
       Events:
         ApiEvent:
           Type: Api
